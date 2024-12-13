@@ -17,6 +17,7 @@ enum DatabaseError: String, Error {
     case deleteFailed = "Error al eliminar"
 }
 
+
 protocol RepositoryProtocol {
     func getAllTasks() -> [Tarea]
     func addNewTask(_ task: Tarea) throws
