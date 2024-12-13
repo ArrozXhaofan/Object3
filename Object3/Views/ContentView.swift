@@ -24,7 +24,6 @@ struct ContentView: View {
                                            description:
                                             Text("Agregue una tarea para comenzar"))
                 
-                    
                 } else {
                     List(allTask) { tarea in
                         TaskRow(tarea: tarea)
