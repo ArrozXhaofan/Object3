@@ -7,3 +7,27 @@
 
 import Foundation
 
+final class TareaViewModel {
+    
+    var repository: RepositoryProtocol
+    var fetchUseCase: FetchUseCaseProtocol
+    var createUseCase: CreateUseCaseProtocol
+    var updateUseCase: UpdateCaseProtocol
+    var deleteUseCase: DeleteUseCaseProtocol
+    
+    @MainActor
+    init(repository: RepositoryProtocol = TareaRepository(),
+         fetchUseCase: FetchUseCaseProtocol = FetchUseCase(),
+         createUseCase: CreateUseCaseProtocol = CreateUseCase(),
+         updateUseCase: UpdateCaseProtocol = UpdateUseCase(),
+         deleteUseCase: DeleteUseCaseProtocol = DeleteUseCase()) {
+        self.repository = repository
+        self.fetchUseCase = fetchUseCase
+        self.createUseCase = createUseCase
+        self.updateUseCase = updateUseCase
+        self.deleteUseCase = deleteUseCase
+    }
+    
+    
+    
+}
