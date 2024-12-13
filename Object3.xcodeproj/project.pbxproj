@@ -16,6 +16,9 @@
 		23A717812D0B5346007981F7 /* FetchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A717802D0B5346007981F7 /* FetchUseCase.swift */; };
 		23A717832D0B58A8007981F7 /* UpdateUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A717822D0B58A8007981F7 /* UpdateUseCase.swift */; };
 		23A717852D0B59B8007981F7 /* DeleteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A717842D0B59B8007981F7 /* DeleteUseCase.swift */; };
+		23A7178E2D0BC64D007981F7 /* TareaSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7178D2D0BC64D007981F7 /* TareaSampleData.swift */; };
+		23A717912D0BC738007981F7 /* UtilsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A717902D0BC738007981F7 /* UtilsData.swift */; };
+		23A717A52D0C9D0E007981F7 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A717A42D0C9D0E007981F7 /* TaskRow.swift */; };
 		23C7D6562D089CF400915FB2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C7D6532D089CF400915FB2 /* ContentView.swift */; };
 		23C7D6572D089CF400915FB2 /* Object3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C7D6542D089CF400915FB2 /* Object3App.swift */; };
 		23C7D6582D089CF400915FB2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23C7D6502D089CF400915FB2 /* Preview Assets.xcassets */; };
@@ -50,6 +53,9 @@
 		23A717802D0B5346007981F7 /* FetchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUseCase.swift; sourceTree = "<group>"; };
 		23A717822D0B58A8007981F7 /* UpdateUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUseCase.swift; sourceTree = "<group>"; };
 		23A717842D0B59B8007981F7 /* DeleteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUseCase.swift; sourceTree = "<group>"; };
+		23A7178D2D0BC64D007981F7 /* TareaSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TareaSampleData.swift; sourceTree = "<group>"; };
+		23A717902D0BC738007981F7 /* UtilsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsData.swift; sourceTree = "<group>"; };
+		23A717A42D0C9D0E007981F7 /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 		23C7D6212D08979500915FB2 /* Object3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Object3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23C7D6332D08979700915FB2 /* Object3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Object3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23C7D63D2D08979700915FB2 /* Object3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Object3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,9 +134,26 @@
 		23A717862D0B60FB007981F7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				23A717A62D0C9E3E007981F7 /* Components */,
 				23C7D6532D089CF400915FB2 /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		23A7178F2D0BC728007981F7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				23A717902D0BC738007981F7 /* UtilsData.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		23A717A62D0C9E3E007981F7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				23A717A42D0C9D0E007981F7 /* TaskRow.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		23C7D6182D08979500915FB2 = {
@@ -158,6 +181,7 @@
 			children = (
 				23C7D6502D089CF400915FB2 /* Preview Assets.xcassets */,
 				2339D5C72D09EFA4006EE7F7 /* SampleData.swift */,
+				23A7178D2D0BC64D007981F7 /* TareaSampleData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -165,6 +189,7 @@
 		23C7D6552D089CF400915FB2 /* Object3 */ = {
 			isa = PBXGroup;
 			children = (
+				23A7178F2D0BC728007981F7 /* Utils */,
 				2339D62D2D0A464A006EE7F7 /* Launch Screen.storyboard */,
 				23C7D6542D089CF400915FB2 /* Object3App.swift */,
 				2339D62A2D0A43E3006EE7F7 /* Models */,
@@ -336,10 +361,13 @@
 				2339D5BE2D09E895006EE7F7 /* TaskModel.swift in Sources */,
 				23C7D6572D089CF400915FB2 /* Object3App.swift in Sources */,
 				23A7177F2D0B4FCC007981F7 /* CreateUseCase.swift in Sources */,
+				23A717A52D0C9D0E007981F7 /* TaskRow.swift in Sources */,
 				2339D5C82D09EFA4006EE7F7 /* SampleData.swift in Sources */,
 				23C7D65C2D089D1C00915FB2 /* TareaViewModel.swift in Sources */,
 				23A717832D0B58A8007981F7 /* UpdateUseCase.swift in Sources */,
 				2339D62C2D0A4494006EE7F7 /* Tarea.swift in Sources */,
+				23A7178E2D0BC64D007981F7 /* TareaSampleData.swift in Sources */,
+				23A717912D0BC738007981F7 /* UtilsData.swift in Sources */,
 				2339D6302D0A48C5006EE7F7 /* TareaRepository.swift in Sources */,
 				23A717812D0B5346007981F7 /* FetchUseCase.swift in Sources */,
 			);

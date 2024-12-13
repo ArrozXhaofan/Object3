@@ -19,7 +19,7 @@ enum DatabaseError: String, Error {
 
 
 protocol RepositoryProtocol {
-    func getAllTasks() throws -> [Tarea]
+    func getAllTasks() -> [Tarea]
     func addNewTask(_ task: Tarea) throws
     func updateTask(identifier: UUID, task: Tarea) throws
     func deleteTask(identifier: UUID) throws
@@ -47,7 +47,7 @@ final class TareaRepository: @preconcurrency RepositoryProtocol {
         }
     }
     
-    func getAllTasks() throws -> [Tarea] {
+    func getAllTasks() -> [Tarea] {
         
         let sort = SortDescriptor<Tarea>(\.lastChange)
         let fetchDescriptor = FetchDescriptor(sortBy: [sort])

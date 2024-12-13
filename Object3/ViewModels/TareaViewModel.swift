@@ -6,8 +6,12 @@
 //
 
 import Foundation
+import Observation
 
+@Observable
 final class TareaViewModel {
+    
+    var allTask: [Tarea] = []
     
     var repository: RepositoryProtocol
     var fetchUseCase: FetchUseCaseProtocol
@@ -26,6 +30,11 @@ final class TareaViewModel {
         self.createUseCase = createUseCase
         self.updateUseCase = updateUseCase
         self.deleteUseCase = deleteUseCase
+        fetchAllTask()
+    }
+    
+    func fetchAllTask() {
+        allTask = fetchUseCase.fetch()
     }
     
     

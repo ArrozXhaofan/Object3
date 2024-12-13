@@ -8,7 +8,7 @@
 import Foundation
 
 protocol FetchUseCaseProtocol {
-    func fetch() throws -> [Tarea]
+    func fetch() -> [Tarea]
 }
 
 final class FetchUseCase: FetchUseCaseProtocol {
@@ -20,8 +20,8 @@ final class FetchUseCase: FetchUseCaseProtocol {
         self.repository = repository
     }
     
-    func fetch() throws -> [Tarea] {
-        try repository.getAllTasks()
+    func fetch() -> [Tarea] {
+        return repository.getAllTasks()
     }
 
 }

@@ -10,7 +10,7 @@ import SwiftData
 
 @main
 struct Object3App: App {
-    var container: ModelContainer = {
+    /*var container: ModelContainer = {
         let schema = Schema([TaskModel.self])
         let setting = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
         do {
@@ -18,13 +18,13 @@ struct Object3App: App {
         } catch  {
             fatalError("Error creating ModelContainer: \(error.localizedDescription)")
         }
-    }()
+    }()*/
     
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(container)
+       // .modelContainer(container)
 
     }
 }

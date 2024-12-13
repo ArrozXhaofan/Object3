@@ -10,21 +10,34 @@ import SwiftData
 
 struct ContentView: View {
     
-    @Query private var tasks: [TaskModel]
+    
+    @Query var allTask: [Tarea] = TareaViewModel().allTask
     
     var body: some View {
-        VStack {
-            List(tasks) { task in
-                VStack {
-                    Text(task.name)
-                    Text(task.descrip)
-
+        
+        NavigationStack {
+            
+            VStack {
+                if allTask.isEmpty {
+                    ContentUnavailableView("No hay tareas",
+                                           systemImage: "pencil.line",
+                                           description:
+                                            Text("Agregue una tarea para comenzar"))
+                
+                    
+                } else {
+                    List(allTask) { tarea in
+                        TaskRow(tarea: tarea)
+                    }
                 }
             }
+            .navigationTitle("Mis tareas")
         }
     }
+    
+    
 }
 
-#Preview(traits: .sampleData) {
+#Preview(traits: .tareaSampleData) {
     ContentView()
 }

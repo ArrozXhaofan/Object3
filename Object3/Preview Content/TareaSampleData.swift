@@ -19,13 +19,8 @@ struct SampleData2: PreviewModifier {
             
         container.mainContext.insert(Tarea.generateRandom())
         container.mainContext.insert(Tarea.generateRandom())
-        
-        let tarea = Tarea(title: "Hola", descript: "ffsdf", taskStatus: .completed, horas: 13)
-        
-        container.mainContext.insert(tarea)
-            
+                    
         return container
-            
     }
    
     func body(content: Content, context: ModelContainer) -> some View {
