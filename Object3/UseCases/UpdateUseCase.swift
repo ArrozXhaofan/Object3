@@ -6,3 +6,21 @@
 //
 
 import Foundation
+
+protocol UpdateCaseProtocol {
+    func update(task: Tarea) throws
+}
+
+final class UpdateUseCase: UpdateCaseProtocol {
+    
+    let repository: RepositoryProtocol
+    
+    @MainActor
+    init(repository: RepositoryProtocol = TareaRepository()) {
+        self.repository = repository
+    }
+    
+    func update(task: Tarea) throws {
+        try repository.updateTask(identifier: task.identifier, task: task)
+    }
+}

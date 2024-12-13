@@ -6,3 +6,23 @@
 //
 
 import Foundation
+
+protocol CreateUseCaseProtocol {
+    func insertItem(_ item: Tarea) throws
+}
+
+final class CreateUseCase: CreateUseCaseProtocol {
+    
+    var repository: RepositoryProtocol
+    
+    @MainActor
+    init(repository: RepositoryProtocol = TareaRepository()) {
+        self.repository = repository
+    }
+    
+    func insertItem(_ item: Tarea) throws {
+        try repository.addNewTask(item)
+    }
+    
+    
+}
