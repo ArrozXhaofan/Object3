@@ -31,3 +31,4 @@ struct SampleData2: PreviewModifier {
 extension PreviewTrait where T == Preview.ViewTraits {
     @MainActor static var tareaSampleData: Self = .modifier(SampleData2())
 }
+

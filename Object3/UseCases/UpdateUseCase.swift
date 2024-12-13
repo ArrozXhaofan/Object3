@@ -11,6 +11,7 @@ protocol UpdateCaseProtocol {
     func update(task: Tarea) throws
 }
 
+
 final class UpdateUseCase: UpdateCaseProtocol {
     
     let repository: RepositoryProtocol

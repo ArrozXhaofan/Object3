@@ -12,13 +12,11 @@ struct TaskRow: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
-            
             HStack(spacing: 45) {
                 Text(tarea.title)
                     .font(.title2)
                     .lineLimit(1)
                     .bold()
-                
                 Circle()
                     .frame(width: 10, height: 10)
                     .foregroundStyle(getStatusColor(tarea.taskStatus))
@@ -27,7 +25,6 @@ struct TaskRow: View {
             Text(tarea.descript)
                 .lineLimit(2)
                 .font(.footnote)
-            
         }
     }
     

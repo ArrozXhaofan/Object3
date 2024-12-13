@@ -29,7 +29,6 @@ struct SampleData: PreviewModifier {
         container.mainContext.insert(task2)
         
         return container
-
     }
     
     func body(content: Content, context: ModelContainer) -> some View {

@@ -11,6 +11,7 @@ protocol FetchUseCaseProtocol {
     func fetch() -> [Tarea]
 }
 
+
 final class FetchUseCase: FetchUseCaseProtocol {
     
     let repository: RepositoryProtocol

@@ -11,6 +11,7 @@ protocol DeleteUseCaseProtocol {
     func delete(identifier: UUID) throws
 }
 
+
 final class DeleteUseCase: DeleteUseCaseProtocol {
     
     let repository: RepositoryProtocol

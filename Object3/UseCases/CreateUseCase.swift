@@ -11,6 +11,7 @@ protocol CreateUseCaseProtocol {
     func insertItem(_ item: Tarea) throws
 }
 
+
 final class CreateUseCase: CreateUseCaseProtocol {
     
     var repository: RepositoryProtocol
